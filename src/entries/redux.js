@@ -1,4 +1,26 @@
-import {
+import { createStore } from 'redux';
+
+const initialState = [
+  {
+    "title": "Despacito",
+  },
+  {
+    "title": "One more time",
+  },
+  {
+    "title": "Echame la culpa",
+  }
+]
+
+const store = createStore(
+  (state) => state,
+  initialState,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
+
+
+
+/* import {
   createStore
 } from 'redux';
 
@@ -73,4 +95,4 @@ function handleChange () {
   render();
 }
 
-store.subscribe(handleChange)
+store.subscribe(handleChange) */
